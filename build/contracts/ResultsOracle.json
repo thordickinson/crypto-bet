@@ -1,0 +1,530 @@
+{
+  "contractName": "ResultsOracle",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "matchId",
+          "type": "uint16"
+        }
+      ],
+      "name": "getResult",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "local",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "away",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testConnection",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"matchId\",\"type\":\"uint16\"}],\"name\":\"getResult\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"local\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"away\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testConnection\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getResult(uint16)\":{\"returns\":{\"away\":\"amount of goals away team have scored.\",\"local\":\"amount of goals local team have scored.\"}},\"testConnection()\":{\"returns\":{\"_0\":\"true allways returns true\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getResult(uint16)\":{\"notice\":\"gets the result of the match given the id.\"},\"testConnection()\":{\"notice\":\"test wether the connection has been succesfuly created or not.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/thord/Documents/ethereum/crypto-bet/contracts/ResultsOracle.sol\":\"ResultsOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/thord/Documents/ethereum/crypto-bet/contracts/ResultsOracle.sol\":{\"keccak256\":\"0xaaaf5db745f0ec7f54468a499fb3eb764f7a249a0a7906447333e0edad4bd591\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://3c4261a051fee58472fbc7f61642b3e232cc42a26bc5d20a691fde10b31620b0\",\"dweb:/ipfs/QmZtR265q2pZEncMFhhFxB4i3jNTrPj8qUNc7qd6xAfPA2\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity ^0.8.4;\n\n\ninterface ResultsOracle {\n\n    ///@notice gets the result of the match given the id.\n    ///@return local amount of goals local team have scored.\n    ///@return away amount of goals away team have scored.\n    function getResult(uint16 matchId) external returns (uint8 local, uint8 away);\n\n    ///@notice test wether the connection has been succesfuly created or not.\n    ///@return true allways returns true\n    function testConnection() external pure returns (bool);\n\n}\n",
+  "sourcePath": "C:/Users/thord/Documents/ethereum/crypto-bet/contracts/ResultsOracle.sol",
+  "ast": {
+    "absolutePath": "/C/Users/thord/Documents/ethereum/crypto-bet/contracts/ResultsOracle.sol",
+    "exportedSymbols": {
+      "ResultsOracle": [
+        267
+      ]
+    },
+    "id": 268,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 250,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 267,
+        "linearizedBaseContracts": [
+          267
+        ],
+        "name": "ResultsOracle",
+        "nameLocation": "72:13:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 251,
+              "nodeType": "StructuredDocumentation",
+              "src": "93:173:1",
+              "text": "@notice gets the result of the match given the id.\n@return local amount of goals local team have scored.\n@return away amount of goals away team have scored."
+            },
+            "functionSelector": "0865b4c2",
+            "id": 260,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getResult",
+            "nameLocation": "280:9:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 253,
+                  "mutability": "mutable",
+                  "name": "matchId",
+                  "nameLocation": "297:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 260,
+                  "src": "290:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "289:16:1"
+            },
+            "returnParameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 256,
+                  "mutability": "mutable",
+                  "name": "local",
+                  "nameLocation": "330:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 260,
+                  "src": "324:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 255,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 258,
+                  "mutability": "mutable",
+                  "name": "away",
+                  "nameLocation": "343:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 260,
+                  "src": "337:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 257,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "337:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "323:25:1"
+            },
+            "scope": 267,
+            "src": "271:78:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 261,
+              "nodeType": "StructuredDocumentation",
+              "src": "355:114:1",
+              "text": "@notice test wether the connection has been succesfuly created or not.\n@return true allways returns true"
+            },
+            "functionSelector": "3412a15c",
+            "id": 266,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testConnection",
+            "nameLocation": "483:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 262,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "497:2:1"
+            },
+            "returnParameters": {
+              "id": 265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 264,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 266,
+                  "src": "523:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 263,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "523:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "522:6:1"
+            },
+            "scope": 267,
+            "src": "474:55:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 268,
+        "src": "62:470:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "36:497:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/thord/Documents/ethereum/crypto-bet/contracts/ResultsOracle.sol",
+    "exportedSymbols": {
+      "ResultsOracle": [
+        267
+      ]
+    },
+    "id": 268,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 250,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 267,
+        "linearizedBaseContracts": [
+          267
+        ],
+        "name": "ResultsOracle",
+        "nameLocation": "72:13:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 251,
+              "nodeType": "StructuredDocumentation",
+              "src": "93:173:1",
+              "text": "@notice gets the result of the match given the id.\n@return local amount of goals local team have scored.\n@return away amount of goals away team have scored."
+            },
+            "functionSelector": "0865b4c2",
+            "id": 260,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getResult",
+            "nameLocation": "280:9:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 253,
+                  "mutability": "mutable",
+                  "name": "matchId",
+                  "nameLocation": "297:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 260,
+                  "src": "290:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "289:16:1"
+            },
+            "returnParameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 256,
+                  "mutability": "mutable",
+                  "name": "local",
+                  "nameLocation": "330:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 260,
+                  "src": "324:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 255,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 258,
+                  "mutability": "mutable",
+                  "name": "away",
+                  "nameLocation": "343:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 260,
+                  "src": "337:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 257,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "337:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "323:25:1"
+            },
+            "scope": 267,
+            "src": "271:78:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 261,
+              "nodeType": "StructuredDocumentation",
+              "src": "355:114:1",
+              "text": "@notice test wether the connection has been succesfuly created or not.\n@return true allways returns true"
+            },
+            "functionSelector": "3412a15c",
+            "id": 266,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testConnection",
+            "nameLocation": "483:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 262,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "497:2:1"
+            },
+            "returnParameters": {
+              "id": 265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 264,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 266,
+                  "src": "523:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 263,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "523:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "522:6:1"
+            },
+            "scope": 267,
+            "src": "474:55:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 268,
+        "src": "62:470:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "36:497:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-05-09T22:08:23.179Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getResult(uint16)": {
+        "returns": {
+          "away": "amount of goals away team have scored.",
+          "local": "amount of goals local team have scored."
+        }
+      },
+      "testConnection()": {
+        "returns": {
+          "_0": "true allways returns true"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getResult(uint16)": {
+        "notice": "gets the result of the match given the id."
+      },
+      "testConnection()": {
+        "notice": "test wether the connection has been succesfuly created or not."
+      }
+    },
+    "version": 1
+  }
+}
